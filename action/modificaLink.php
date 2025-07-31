@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "../config/conecta.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,4 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $consulta = $con->prepare($sql);
     $consulta->bind_Param("ss", $link, $cod);
     $consulta->execute();
+
+    $_SESSION['mylink'] = $cod;
+    header('Location: ../form.php');
 }
