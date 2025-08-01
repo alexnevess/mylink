@@ -34,5 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $consulta->execute();
 
     $_SESSION['mylink'] = $cod;
+    // $_SESSION['link'] = $link;
     header('Location: ../form.php');
 }

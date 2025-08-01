@@ -1,0 +1,84 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: auto;
+    height: 90vh;
+}
+
+.title {
+    font-size: 60px;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+}
+
+input {
+    border: none;
+    padding: 5px;
+
+}
+
+.inputLink {
+    width: 100%;
+    border-top: 1px solid black;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.inputBtn {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    background-color: rgb(207, 207, 207);
+}
+
+.cardLink {
+    background-color: rgb(197, 197, 197);
+    margin: 30px;
+    width: 350px;
+}
+
+.resLink {
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+.meuLink {
+    color: black;
+    font-size: 20px;
+}
+
+@media (max-width: 400px) {
+    main {
+        max-width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .cardLink {
+        width: 90%;
+    }
+}
