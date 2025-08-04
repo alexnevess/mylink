@@ -45,6 +45,14 @@ input {
     border-bottom: 1px solid black;
     border-left: none;
     background-color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+
+.erro{
+    color: red;
+    font-size: 20px;
+   margin: 0;
+
 }
 
 .cardLink {

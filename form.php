@@ -16,9 +16,14 @@ session_start();
     <main>
         <h1 class="title">MyLink</h1>
         <form action="action/modificaLink.php" method="post">
-            <input class="inputLink" type="text" name="link" id="link">
+            <input class="inputLink" type="text" name="link" id="link" placeholder="Digite um link..." required>
             <input class="inputBtn" type="submit">
         </form>
+        <?php
+        if (isset($_GET['erro'])) {
+            echo "<p class='erro'>Adicione um link</p>";
+        }
+        ?>
         <div class="cardLink">
             <?php
             if (isset($_SESSION['mylink'])) {
