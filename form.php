@@ -8,15 +8,16 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mylink</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
     <main>
         <h1 class="title">MyLink</h1>
+        <p class="text">Encurtador de URL</p>
         <form action="action/modificaLink.php" method="post">
-            <input class="inputLink" type="text" name="link" id="link" placeholder="Digite um link..." required>
+            <input class="inputLink" type="text" name="link" id="link" placeholder="Cole seu link aqui" required>
             <input class="inputBtn" type="submit">
         </form>
         <?php
