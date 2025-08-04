@@ -27,13 +27,20 @@ session_start();
         <div class="cardLink">
             <?php
             if (isset($_SESSION['mylink'])) {
-                // echo "<p class='resLink'>Seu link: ". $_SESSION['link']."</p>";
-                echo "<p class='resLink'>localhost/mylink?ml=" . $_SESSION['mylink'] . "</p>";
+                echo "<input class='resultado' type='text' id='resultado' readonly value='"."localhost/mylink?ml=". $_SESSION['mylink'] ."'>";
+                echo "<input onclick='btnCopiar()' class='resBtn' type='submit' value='copiar'>";
             }
             ?>
         </div>
     </main>
     <footer><a class="meuLink" href="https://linktr.ee/alexnevess.dev">alexnevess.dev</a></footer>
+
+    <script>
+        function btnCopiar(){
+            const link = document.getElementById("resultado").value;
+            navigator.clipboard.writeText(link);
+        }
+    </script>
 </body>
 
 </html>
