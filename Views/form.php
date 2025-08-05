@@ -9,14 +9,14 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mylink</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
     <main>
         <h1 class="title">MyLink</h1>
         <p class="text">Encurtador de URL</p>
-        <form action="action/modificaLink.php" method="post">
+        <form action="../index.php?route=form" method="post">
             <input class="inputLink" type="text" name="link" id="link" placeholder="Cole seu link aqui" required>
             <input class="inputBtn" type="submit">
         </form>
