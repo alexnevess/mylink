@@ -1,14 +1,14 @@
 <?php
 include "config/conecta.php";
+require "Controllers/LinkController.php";
 
-if ($_SERVER['REQUEST_METHOD'] == "GET") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $codLink = $_GET['ml'] ?? null;
-    $route = $_GET['route'] ?? null;
+    $route = $_GET['route'] ?? null;//Recebe um GET do form para lógica da rota
+    var_dump($_GET);
 
     if ($route === null) {
-        if ($codLink === null) {
-            header('Location: Views/form.php');
-        } else {
+        if ($codLink !== null) {
             //Busca o link no BD através da query GET
             $sql = "SELECT link , mylink FROM mylink WHERE mylink = ?";
             $consulta = $con->prepare($sql);
@@ -26,7 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         }
     }elseif($route === "form")
     {
-        // $controller = new LinkController($_POST);
-        // $controller->salvaLink;
+        $controller = new LinkController;
+        $res = $controller->encurtar($_POST['link']);
+        echo $res;
+        
     }
+}else{
+    header('Location: Views/form.php');
 }

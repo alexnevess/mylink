@@ -16,7 +16,7 @@ session_start();
     <main>
         <h1 class="title">MyLink</h1>
         <p class="text">Encurtador de URL</p>
-        <form action="../index.php?route=form" method="post">
+        <form action="../index.php?route=form" method="POST">
             <input class="inputLink" type="text" name="link" id="link" placeholder="Cole seu link aqui" required>
             <input class="inputBtn" type="submit">
         </form>
