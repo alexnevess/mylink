@@ -5,7 +5,6 @@ require "Controllers/LinkController.php";
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $codLink = $_GET['ml'] ?? null;
     $route = $_GET['route'] ?? null;//Recebe um GET do form para lógica da rota
-    var_dump($_GET);
 
     if ($route === null) {
         if ($codLink !== null) {
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }elseif($route === "form")
     {
         $controller = new LinkController;
-        $res = $controller->encurtar($_POST['link']);
+        $res = $controller->encurtar($_POST['link'], $con);
         echo $res;
         
     }
