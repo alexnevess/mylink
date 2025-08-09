@@ -1,7 +1,10 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: aliceblue;
+    background-color: white ;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
 }
 
 main {
@@ -17,10 +20,14 @@ main {
 .title {
     font-size: 60px;
     margin: 0;
+    background-color: #007BFF;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
-.text{
-    margin:  0 0 15px;
+.text {
+    margin: 0 0 15px;
     padding: 0;
     font-size: 20px;
 }
@@ -28,30 +35,37 @@ main {
 form {
     display: flex;
     justify-content: center;
-    width: 350px;
+    width: 500px;
 }
 
 input {
     border: none;
-    padding: 5px;
-
+    padding: 10px;
+    font-size: 15px;
 }
 
 .inputLink {
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(104, 104, 104);
     border-right: none;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-bottom: 1px solid rgb(104, 104, 104);
+    border-left: 1px solid rgb(104, 104, 104);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .inputBtn {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid rgb(104, 104, 104);
+    border-right: 1px solid rgb(104, 104, 104);
+    border-bottom: 1px solid rgb(104, 104, 104);
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
     border-left: none;
-    background-color: rgb(207, 207, 207);
+    background-color: #007BFF;
     cursor: pointer;
+    color: white;
 }
 
 .erro {
@@ -72,11 +86,18 @@ input {
 .resultado {
     width: 60%;
     font-size: 17px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-.resBtn{
+.resBtn {
     width: 17%;
     cursor: pointer;
+    background-color: #6c757d;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
 .resLink {
@@ -95,7 +116,7 @@ footer {
     font-size: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 510px) {
     main {
         max-width: 100%;
     }
