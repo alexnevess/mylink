@@ -36,4 +36,14 @@ class Link
         $consulta->bind_Param("ss", $url, $cod);
         return $consulta->execute();
     }
+    public function pesquisa($link, $con)
+    {
+        $sql = "SELECT link FROM mylink WHERE mylink = ?";
+        $consultaMyLink = $con->prepare($sql);
+        $consultaMyLink->bind_param("s", $link);
+        $consultaMyLink->execute();
+        $resultado = $consultaMyLink->get_result();
+        return $resultado->fetch_assoc();
+
+    }
 }

@@ -3,14 +3,18 @@ require_once "Models/Link.php";
 
 class LinkController
 {
-
    public function encurtar($url, $con)
    {
-      $link = new Link;
-      $url = $link->sanitiza($url);
-      $cod = $link->geraCod($con);
-      $bo = $link->salva($url, $cod, $con);
-      
+      $encurta = new Link;
+      $url = $encurta->sanitiza($url);
+      $cod = $encurta->geraCod($con);
+      $bo = $encurta->salva($url, $cod, $con);
+
       include "Views/form.php";
+   }
+   public function redireciona($link, $con) 
+   {
+     $redireciona = new Link;
+     return $redireciona->pesquisa($link, $con);
    }
 }
