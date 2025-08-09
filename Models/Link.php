@@ -1,6 +1,16 @@
 <?php
 class Link
 {
+    public function sanitiza($url)
+    {
+        if (stristr($url, "http://") !== false) {
+            $url = str_replace("http://", "", $url);
+            $url = "https://" . $url;
+        } elseif (stristr($url, "https://") === false) {
+            $url = "https://" . $url;
+        }
+        return $url;
+    }
     public function geraCod($con)
     {
         do {
@@ -18,5 +28,12 @@ class Link
         } while ($linhas !== null);
 
         return $num;
+    }
+    public function salva($url, $cod, $con)
+    {
+        $sql = "INSERT INTO mylink (link, mylink) VALUES (?,?)";
+        $consulta = $con->prepare($sql);
+        $consulta->bind_Param("ss", $url, $cod);
+        return $consulta->execute();
     }
 }

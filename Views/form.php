@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mylink</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="/mylink/style/style.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@ session_start();
         ?>
         <div class="cardLink">
             <?php
-            if (isset($_SESSION['mylink'])) {
-                echo "<input class='resultado' type='text' id='resultado' readonly value='"."localhost/mylink?ml=". $_SESSION['mylink'] ."'>";
+            if (isset($cod)) {
+                echo "<input class='resultado' type='text' id='resultado' readonly value='"."localhost/mylink?ml=". $cod ."'>";
                 echo "<input onclick='btnCopiar()' class='resBtn' type='submit' value='copiar'>";
             }
             ?>

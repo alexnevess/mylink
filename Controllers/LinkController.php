@@ -1,13 +1,16 @@
 <?php
 require_once "Models/Link.php";
 
-class LinkController {
+class LinkController
+{
 
-   public function encurtar($link, $con)
+   public function encurtar($url, $con)
    {
-      $novoCod = new Link;
-      $res = $novoCod->geraCod($con);
-      return $res;
+      $link = new Link;
+      $url = $link->sanitiza($url);
+      $cod = $link->geraCod($con);
+      $bo = $link->salva($url, $cod, $con);
+      
+      include "Views/form.php";
    }
 }
-?>
