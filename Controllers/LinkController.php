@@ -10,7 +10,8 @@ class LinkController
       $cod = $encurta->geraCod($con);
       $bo = $encurta->salva($url, $cod, $con);
 
-      include "Views/form.php";
+      $_SESSION['mylink'] = $cod;
+      header('Location: index.php?s=1');
    }
    public function redireciona($link, $con) 
    {

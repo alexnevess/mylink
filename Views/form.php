@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +17,6 @@ session_start();
         <h1 class="title">MyLink</h1>
         <p class="text">Encurtador de URL</p>
         <form action="" method="POST">
-            <input type="hidden" name="route" value="form">
             <input class="inputLink" type="text" name="link" id="link" placeholder="Cole seu link aqui" required>
             <input class="inputBtn" type="submit" value="Encurtar">
         </form>
@@ -32,8 +27,8 @@ session_start();
         ?>
         <div class="cardLink">
             <?php
-            if (isset($cod)) {
-                echo "<input class='resultado' type='text' id='resultado' readonly value='" . "localhost/mylink?ml=" . htmlspecialchars($cod) . "'>";
+            if (isset($_SESSION['mylink'])) {
+                echo "<input class='resultado' type='text' id='resultado' readonly value='" . "localhost/mylink?ml=" . htmlspecialchars($_SESSION['mylink']) . "'>";
                 echo "<input onclick='btnCopiar()' class='resBtn' type='submit' value='copiar'>";
             }
             ?>
