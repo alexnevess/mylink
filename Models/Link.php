@@ -9,7 +9,9 @@ class Link
         } elseif (stristr($url, "https://") === false) {
             $url = "https://" . $url;
         }
-        return $url;
+
+        $url_validada = filter_var($url, FILTER_VALIDATE_URL);
+        return $url_validada;
     }
     public function geraCod($con)
     {

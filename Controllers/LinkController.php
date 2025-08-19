@@ -7,11 +7,20 @@ class LinkController
    {
       $encurta = new Link;
       $url = $encurta->sanitiza($url);
+      if($url !== false)
+      {
+      $_SESSION['erro_url'] = false;
       $cod = $encurta->geraCod($con);
       $bo = $encurta->salva($url, $cod, $con);
+      }
+      else
+      {
+         $_SESSION['erro_url'] = true;
+         header('Location: index.php');
+      }
 
       $_SESSION['mylink'] = $cod;
-      header('Location: index.php?s=1');
+      header('Location: index.php');
    }
    public function redireciona($link, $con) 
    {

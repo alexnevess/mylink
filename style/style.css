@@ -70,6 +70,9 @@ input {
 }
 
 .erro {
+    background-color: rgb(255,0,0,0.4);
+    padding: 10px;
+    border-radius: 15px;
     color: red;
     font-size: 20px;
     margin: 0;
