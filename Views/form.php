@@ -37,12 +37,7 @@
     </main>
     <footer><a class="meuLink" href="https://linktr.ee/alexnevess.dev">alexnevess.dev</a></footer>
 
-    <script>
-        function btnCopiar() {
-            const link = document.getElementById("resultado").value;
-            navigator.clipboard.writeText(link);
-        }
-    </script>
+    <script src="/mylink/assets/js/copia.js"></script>
 </body>
 
 </html>
