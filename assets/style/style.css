@@ -69,6 +69,10 @@ input {
     color: white;
 }
 
+.inputBtn:hover{
+    background-color: #003e80;
+}
+
 .erro {
     background-color: rgb(255,0,0,0.4);
     padding: 10px;
@@ -101,7 +105,10 @@ input {
     color: white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
 
+.resBtn:hover{
+    background-color: #4b4b4b;
 }
 
 .resLink {
