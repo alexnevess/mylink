@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mylink</title>
-    <link rel="stylesheet" href="/mylink/style/style.css">
-    <link rel="shortcut icon" type="imagex/png" href="img/mylink_logo.png">
+    <link rel="stylesheet" href="/mylink/assets/style/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="/mylink/assets/img/mylink_logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

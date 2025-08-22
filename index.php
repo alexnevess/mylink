@@ -13,14 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == "GET") {
     $link = $_GET['ml'] ?? null;
-    $sucesso = $_GET['s'] ?? null;
 
     if (isset($link)) {
         $redireciona = new LinkController;
         $busca = $redireciona->redireciona($link, $con);
         header("Location:" . $busca['link']);
-    } elseif (isset($sucesso)) {
-        require_once "views/form.php";
     } else {
         require_once "views/form.php";
     }
